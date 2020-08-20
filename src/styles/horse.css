@@ -1,0 +1,41 @@
+.horse {
+    position: absolute;
+    bottom: 370px;
+    left: 120px;
+    width: calc(5px * 30);
+    height: calc(4px * 30);
+    background-image: url(src/images/horse-sheet.gif);
+    background-size: cover;
+    background-repeat: none;
+    z-index: 15;
+    //transform: translateX(-300px);
+    transition: transform 1.3s linear;
+    transform: scaleX(-1);
+    transform-origin: 50% 50%;
+    animation: float 3s ease-out infinite;
+
+    &.facing-left {
+        transform: scaleX(1);
+    }
+
+    &.enter {
+        transform: translateX(0);
+    }
+
+    &.walking {
+        &.frame-2 {
+            background-position: 45.5% 0%;
+        }
+
+        &.frame-3 {
+            background-position: 91% 0;
+        }
+    }
+}
+
+
+  @keyframes float {
+    50% {
+       transform: translate(0, 20px) scaleX(-1);
+    }
+  }

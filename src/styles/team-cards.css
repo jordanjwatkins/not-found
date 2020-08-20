@@ -1,0 +1,46 @@
+.team-cards {
+    height: 150px;
+    padding: 10px;
+    display: flex;
+    width: 100%;
+
+    > div {
+        margin: 0 20px;
+        width: 125px;
+        height: 100%;
+
+        background: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .beardman-card {
+        width: calc(8px * 7);
+        height: calc(13px * 7);
+        background-image: url(src/images/beardman-walk.png);
+        background-size: cover;
+    }
+
+    .horse-card {
+        width: calc(5px * 15);
+        height: calc(4px * 15);
+        background-image: url(src/images/horse-sheet.gif);
+        background-size: cover;
+    }
+
+    .a-404-card {
+        background: #111;
+        color: #fff;
+    }
+}
+
+.fixed-bottom {
+    position: absolute;
+    bottom: 0;
+    background: #222;
+    width: 100%;
+    z-index: 20;
+}
